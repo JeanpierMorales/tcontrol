@@ -1,0 +1,168 @@
+/* 
+  Estilos principales para la sección de IndustriaTres.
+  Se utilizan prefijos 'industria3-' para evitar conflictos con otras secciones.
+*/
+
+/* Contenedor general de la sección */
+.industria3-section {
+  margin: 10rem 0rem;
+  padding: 0rem 0.8rem 0rem 0.8rem;
+}
+
+/* Título principal */
+.industria3-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+/* Subtítulo */
+.industria3-subtitle {
+  font-size: 16px;
+  color: #929292;
+  max-width: 700px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+/* Carrusel: se define altura, bordes y bordes redondeados */
+.industria3-carousel {
+  margin: 0 auto;
+  max-width: 800px;
+  height: 400px; /* Altura fija para el carrusel */
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Cada item del carrusel debe ocupar la altura definida */
+.industria3-carousel-item {
+  height: 400px;
+  position: relative;
+}
+
+/* Imagen: se adapta al contenedor manteniendo el cover */
+.industria3-slide-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* Overlay para oscurecer la imagen (ajusta la opacidad según necesites) */
+.industria3-slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Caption: se coloca por encima del overlay con los textos centrados */
+.industria3-carousel-caption {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+  width: 90%;
+}
+
+/* H5 y P en el caption: se mantienen los estilos por defecto */
+.industria3-carousel-caption h5 {
+  margin-bottom: 0.5rem;
+  font-family: "Inter", sans-serif;
+}
+
+.industria3-carousel-caption p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Botones de navegación personalizados:
+       Se eliminan los iconos por defecto y se crean flechas con borde negro y mayor grosor */
+.industria3-carousel-control-prev-icon,
+.industria3-carousel-control-next-icon {
+  background-image: none; /* Elimina el icono de Bootstrap */
+  display: inline-block;
+  border: solid rgb(255, 255, 255);
+  border-width: 0 4px 4px 0;
+  padding: 10px;
+}
+
+/* Flecha para el botón de retroceso */
+.industria3-carousel-control-prev-icon {
+  transform: rotate(135deg);
+}
+
+/* Flecha para el botón de avance */
+.industria3-carousel-control-next-icon {
+  transform: rotate(-45deg);
+}
+@media (max-width: 860px) {
+  /* Ajustar el tamaño del carrusel */
+  .industria3-carousel {
+    max-width: 100%;
+    height: 400px; /* Altura ajustada */
+    width: 650px; /* Ancho ajustado */
+  }
+  .industria3-carousel-item {
+    height: 400px; /* Altura ajustada */
+  }
+}
+
+/* Estilos para pantallas menores a 600px */
+@media (max-width: 755px) {
+  /* Reducir el tamaño del carrusel */
+  .industria3-carousel {
+    max-width: 100%;
+    height: 420px; /* Altura reducida */
+    width: 430px;
+  }
+  .industria3-carousel-item {
+    height: 420px;
+  }
+  .industria3-subtitle {
+    font-size: 0.9rem;
+    display: none;
+  }
+
+  /* Reposicionar el caption */
+  .industria3-carousel-caption {
+    top: 10px; /* Lo posiciona en la parte superior interna */
+    bottom: auto; /* Elimina la posición inferior */
+    transform: translateX(-50%);
+    width: 90%;
+    text-align: center;
+  }
+  .industria3-carousel-caption h5 {
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
+    margin: 0;
+    position: absolute; /* Posiciona el h5 */
+    top: 10px; /* Lo coloca en la parte superior interna */
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .industria3-carousel-caption p {
+    display: none; /* Se oculta el párrafo */
+  }
+}
+
+/* Ajustes adicionales para pantallas hasta 768px (si deseas reducir ligeramente otros textos) */
+@media (max-width: 768px) {
+  .industria3-subtitle {
+    font-size: 0.9rem;
+  }
+}

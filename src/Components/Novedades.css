@@ -1,0 +1,166 @@
+/* Sección principal */
+.novedades-section {
+  margin: 10rem 0;
+  background-color: #fff;
+}
+
+/* Título */
+.novedades-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+/* Subtítulo */
+.novedades-subtitle {
+  font-size: 16px;
+  color: #929292;
+  max-width: 700px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+/* Contenedor de las tarjetas */
+.novedades-cards {
+  gap: 2rem; /* Espacio entre tarjetas (si usas d-flex y flex-wrap) */
+  flex-wrap: nowrap !important; /* Asegura que las tarjetas no se envuelvan */
+}
+
+/* Tarjeta individual (sin borde, como solicitaste) */
+.novedad-card {
+  width: 300px; /* Ajusta según necesites */
+  background-color: transparent; /* Sin bordes, sin fondo */
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de la imagen */
+.novedad-image {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Establece una altura fija para las imágenes */
+}
+
+/* La imagen en sí */
+.novedad-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionar */
+  display: block;
+}
+
+/* Overlay para oscurecer la imagen */
+.novedad-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Ajusta la opacidad (0.5 = 50%) */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* Div inferior con info (mitad dentro de la imagen, mitad fuera) */
+.novedad-info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px; /* Ajusta según cuánta “mitad” quieras fuera de la imagen */
+  width: 90%;
+  background-color: #c5c5c5; /* Color de fondo */
+  padding: 1rem;
+  border-bottom: 3px solid #222; /* Borde inferior que cambia al hover */
+  transition: border-color 0.3s ease;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+  text-align: left;
+}
+
+/* Texto dentro del div inferior */
+.novedad-fecha {
+  font-size: 14px;
+  color: #222;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.novedad-titulo {
+  font-size: 16px;
+  color: #222;
+  margin: 0;
+  font-weight: 600;
+}
+.novedad-image:hover {
+  cursor: pointer;
+}
+/* Efecto hover: el borde inferior se vuelve un “neón” celeste */
+.novedad-info:hover,
+.novedad-image:hover .novedad-info {
+  border-bottom: 3px solid #5fcdd1; /* Neon celeste (#0ff) */
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+/* Ajuste responsivo (ejemplo) */
+@media (max-width: 576px) {
+  .novedades-cards {
+    gap: 1rem;
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    justify-content: center; /* Centrar las tarjetas */
+  }
+  .novedad-card {
+    width: 90%; /* Una tarjeta por fila */
+    margin: 0 auto 1rem auto;
+  }
+  .novedad-info {
+    width: 95%;
+    bottom: -15px;
+  }
+  .novedad-image {
+    height: 180px; /* Ajustar la altura de las imágenes */
+  }
+}
+
+/* Para pantallas menores a 1015px */
+@media (max-width: 1015px) {
+  .novedades-cards {
+    display: flex; /* Usar flexbox para alinear las tarjetas en una fila */
+    flex-wrap: nowrap; /* Evitar que las tarjetas se envuelvan */
+    justify-content: space-between; /* Espaciado uniforme entre las tarjetas */
+    gap: 1rem; /* Espaciado entre las tarjetas */
+  }
+
+  .novedad-card {
+    width: 28%; /* Reducir el ancho de las tarjetas para que quepan en una fila */
+    height: auto; /* Ajustar la altura automáticamente */
+    margin-bottom: 0; /* Eliminar el margen inferior */
+  }
+
+  .novedad-image {
+    height: 250px; /* Reducir la altura de las imágenes */
+  }
+
+  .novedad-info {
+    font-size: 14px; /* Reducir el tamaño del texto */
+    padding: 0.5rem; /* Reducir el padding */
+  }
+
+  .novedad-titulo {
+    font-size: 11px; /* Ajustar el tamaño del título */
+    padding: 8px 0;
+  }
+
+  .novedad-fecha {
+    font-size: 12px; /* Ajustar el tamaño de la fecha */
+  }
+}

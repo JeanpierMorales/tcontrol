@@ -1,0 +1,350 @@
+/* ============================= */
+/*       UbicanosMensajes.css   */
+/* ============================= */
+
+/* Global Styles */
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Sección principal */
+.ubicanos-section {
+  margin: 10rem 0 0;
+  position: relative;
+}
+
+.tituloUbicanos {
+  font-size: 40px;
+  font-weight: 600;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Mapa container */
+.ubicanos-map-container {
+  position: relative;
+  width: 80%;
+  padding-bottom: 40.25%; /* Relación 16:9 */
+  border-radius: 8px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Aplica filtro en escala de grises al iframe del mapa */
+/* Estilos para personalizar el color del mapa */
+.ubicanos-map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+
+  /* Opciones para manejar el color del mapa */
+  /* Opción 1: Escala de grises */
+  /* filter: grayscale(1); */
+
+  /* Opción 2: Aumentar contraste */
+  /* filter: contrast(1.5); */
+
+  /* Opción 3: Reducir saturación */
+  /* filter: saturate(0.5); */
+
+  /* Opción 4: Combinación personalizada */
+  /* filter: contrast(1.2) saturate(0.2); */
+  /* Ajuste predeterminado */
+
+  filter: grayscale(0.5);
+}
+
+/* Información de contacto */
+.ubicanos-contact-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  max-width: 480px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.Dub {
+  padding-top: 1rem;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.Tub {
+  font-size: 16px;
+  color: #222;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+/* Íconos sociales */
+.ubicanos-social-icons a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.ubicanos-social-icons a:hover {
+  color: #222;
+}
+
+/* Botón de mensaje */
+.message-btn {
+  background: none;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* ============================= */
+/*        Overlay Styles        */
+/* ============================= */
+
+/* Cubre toda la sección y opaca el fondo */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Opacidad del fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+/* Contenido emergente */
+.overlay-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px; /* Bordes redondeados */
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Botón para retroceder */
+.back-btn {
+  font-size: 16px;
+  color: #fff;
+  background-color: #6c757d; /* Color gris */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #5a6268; /* Gris más oscuro al pasar el mouse */
+}
+
+/* ============================= */
+/*         Form Styles          */
+/* ============================= */
+
+/* Contenedor principal del formulario */
+.datos-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  gap: 1.5rem; /* Espaciado entre los elementos */
+  border: 1px solid #ccc; /* Borde del formulario */
+  border-radius: 8px; /* Bordes redondeados */
+  padding: 2rem; /* Espaciado interno */
+  background-color: #f9f9f9; /* Fondo claro */
+  max-width: 500px; /* Ancho máximo */
+  margin: 0 auto; /* Centra el formulario en la página */
+}
+
+.datos-title {
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Estilo para los inputs y textarea */
+.datos-textarea {
+  width: 100%;
+  border-radius: 20px; /* Bordes redondeados de 20px */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.datos-email-input {
+  width: 100%;
+  border-radius: 10px; /* Bordes redondeados de 10px */
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+.datos-textarea:focus,
+.datos-email-input:focus {
+  outline: none;
+  border: 1px solid #c5c5c5;
+}
+
+/* Contenedor para los botones */
+.datos-buttons {
+  display: flex;
+  justify-content: space-between; /* Espaciado entre los botones */
+  width: 100%; /* Ocupa todo el ancho del formulario */
+}
+
+/* Botón Enviar */
+.datos-btn {
+  font-size: 16px;
+  color: #222;
+  background-color: transparent; /* Sin fondo */
+  border: 1px solid #222; /* Borde de 1px color #222 */
+  border-radius: 0; /* Sin bordes redondeados */
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: none; /* Sin sombra */
+}
+.datos-btn:not(:hover) {
+  border: 1px solid #222;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.datos-btn:hover {
+  border: 1px solid #222;
+  font-family: "Inter", sans-serif;
+  font-weight: 100;
+}
+
+/* ============================= */
+/*       Responsive Styles      */
+/* ============================= */
+
+@media (max-width: 768px) {
+  .ubicanos-map-container {
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 ratio */
+  }
+  .tituloUbicanos {
+    font-size: 32px;
+  }
+  .datos-title {
+    font-size: 32px;
+  }
+  .ubicanos-contact-info {
+    padding: 20px;
+    max-width: 360px;
+  }
+  .Dub {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 576px) {
+  .datos-textarea,
+  .datos-email-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .datos-btn {
+    font-size: 14px;
+    padding: 6px 15px;
+  }
+
+  .message-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Botón circular */
+    background-color: #222; /* Fondo negro */
+    color: #fff; /* Texto blanco */
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+
+  .message-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.textarea.form-control,
+.form-group {
+  border-radius: 20px;
+}
+
+/* Estilos responsivos para ocultar recuadro en pantallas pequeñas */
+.textarea.form-control {
+  min-height: calc(1.5em + 0.75rem + calc(var(--bs-border-width) * 2));
+  border-radius: 20px; /* Borde redondeado de 20px */
+}
+.datos-btn {
+  font-size: 16px;
+  color: #222;
+  background-color: transparent;
+  border: 1px solid #222; /* Borde de 1px color #222 */
+  border-radius: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+  box-shadow: none !important;
+}
+
+/* Input de correo centrado en la ventana emergente y con border-radius de 10px */
+.datos-email-input {
+  width: 100%;
+  border-radius: 10px !important;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+.datos-textarea {
+  width: 100%;
+  border-radius: 20px !important;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 576px) {
+  .message-btn::after {
+    content: "Enviar consulta";
+    position: absolute;
+    top: -35px;
+    right: 0;
+    background: #222;
+    color: #fff;
+    padding: 4px 8px;
+    font-size: 0.7rem;
+    border-radius: 40px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,138 @@
+s.HContactanos {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+/* Estilos para el párrafo */
+.pContactanos {
+  font-size: 16px;
+  color: #929292;
+  max-width: 700px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+}
+
+.card-body {
+  justify-content: space-evenly;
+}
+
+/* Estilo de las tarjetas */
+.custom-card-Contactanos {
+  margin-top: 2rem;
+  width: 18rem;
+  height: 23rem;
+  box-shadow: 0 4px 6px #929292;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+  border-radius: 20px;
+}
+
+/* Efecto hover para las tarjetas */
+.custom-card-Contactanos:hover {
+  transform: scale(1.03);
+  background-color: #e5e1e1;
+  transition: linear 0.2s;
+}
+
+/* Estilo para las imágenes dentro de las tarjetas */
+.custom-img {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.icon,
+.calendly-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px; /* Espacio entre el ícono y el título */
+  color: #222222; /* Color del ícono */
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Estilo para el texto de la tarjeta */
+.custom-text-Contactanos {
+  color: #8a8989;
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Estilo para el botón */
+.custom-btn-Contactanos {
+  color: #222222;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efecto hover en el botón */
+.custom-btn-Contactanos:hover {
+  color: #222;
+  background-color: transparent;
+  border-bottom: 2px solid #222;
+  border-radius: 0%;
+}
+
+/* Efecto hover en el botón cuando la tarjeta está en hover */
+.custom-card-Contactanos:hover .custom-btn-Contactanos {
+  color: #222;
+  background-color: transparent;
+  border-bottom: 2px solid #222;
+  border-radius: 0%;
+}
+
+.Contactanos-cards {
+  margin-bottom: 6rem;
+}
+
+.card-title-Contactanos {
+  font-weight: 700;
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+}
+
+/* Estilo para los enlaces que envuelven las tarjetas */
+.custom-card-link {
+  text-decoration: none; /* Quita el subrayado del enlace */
+  color: inherit; /* Hereda el color del texto */
+  display: inline-block; /* Asegura que el enlace envuelva la tarjeta */
+}
+
+.custom-card-link:hover {
+  cursor: pointer; /* Cambia el cursor a pointer al pasar sobre la tarjeta */
+}
+
+/* Para pantallas menores a 1015px */
+@media (max-width: 1015px) {
+  .custom-card-Contactanos {
+    width: 14rem; /* Reducir el ancho de las tarjetas */
+    height: 20rem; /* Reducir la altura de las tarjetas */
+    padding: 15px; /* Ajustar el padding */
+  }
+
+  .Contactanos-cards {
+    display: flex; /* Usar flexbox para alinear las tarjetas en una fila */
+    flex-wrap: nowrap; /* Evitar que las tarjetas se envuelvan */
+    justify-content: space-between; /* Espaciado uniforme entre las tarjetas */
+    gap: 1rem; /* Espaciado entre las tarjetas */
+  }
+}
