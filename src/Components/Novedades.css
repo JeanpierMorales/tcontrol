@@ -1,309 +1,166 @@
-.SProceso {
-  margin-top: 10rem;
-  margin-bottom: 7rem;
-  text-align: center;
+/* Sección principal */
+.novedades-section {
+  margin: 10rem 0;
+  background-color: #fff;
 }
 
-.svg-icon-container {
-  margin-top: auto;
-  text-align: center;
-}
-
-.svg-icon {
-  width: 40px;
-  height: 40px;
-  color: #222222;
-}
-
-.custom-card-Proceso {
-  margin-top: 2rem;
-  width: 16rem;
-  height: 30rem;
-  border-radius: 20px;
-  box-shadow: 0 4px 6px #929292;
-  transition: transform 0.3s ease;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Distribuir elementos uniformemente */
-  align-items: center;
-  padding: 20px;
-}
-
-/* Efecto hover para las tarjetas */
-.custom-card-Proceso:hover {
-  transform: scale(1.03);
-  background-color: #e5e1e1;
-  transition: linear 0.2s;
-}
-.custom-text-Proceso {
-  font-size: 16px;
-  color: #343434;
-  max-width: 500px;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 1rem;
+/* Título */
+.novedades-title {
+  font-size: 40px;
+  margin-bottom: 10px;
   font-family: "Inter", sans-serif;
-  font-weight: 500;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
 }
 
-.pProceso {
+/* Subtítulo */
+.novedades-subtitle {
   font-size: 16px;
   color: #929292;
   max-width: 700px;
-  margin: 0 auto 50px;
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   letter-spacing: 0.5px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
 }
 
-.card-title-Proceso {
-  font-size: 21px;
-  font-weight: 700;
+/* Contenedor de las tarjetas */
+.novedades-cards {
+  gap: 2rem; /* Espacio entre tarjetas (si usas d-flex y flex-wrap) */
+  flex-wrap: nowrap !important; /* Asegura que las tarjetas no se envuelvan */
+}
+
+/* Tarjeta individual (sin borde, como solicitaste) */
+.novedad-card {
+  width: 300px; /* Ajusta según necesites */
+  background-color: transparent; /* Sin bordes, sin fondo */
+  margin-bottom: 2rem;
+}
+
+/* Contenedor de la imagen */
+.novedad-image {
+  position: relative;
+  width: 100%;
+  height: 350px; /* Establece una altura fija para las imágenes */
+}
+
+/* La imagen en sí */
+.novedad-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin distorsionar */
+  display: block;
+}
+
+/* Overlay para oscurecer la imagen */
+.novedad-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Ajusta la opacidad (0.5 = 50%) */
+  z-index: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* Div inferior con info (mitad dentro de la imagen, mitad fuera) */
+.novedad-info {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -20px; /* Ajusta según cuánta “mitad” quieras fuera de la imagen */
+  width: 90%;
+  background-color: #c5c5c5; /* Color de fondo */
+  padding: 1rem;
+  border-bottom: 3px solid #222; /* Borde inferior que cambia al hover */
+  transition: border-color 0.3s ease;
+  z-index: 2; /* Asegura que el texto esté por encima del overlay */
+  text-align: left;
+}
+
+/* Texto dentro del div inferior */
+.novedad-fecha {
+  font-size: 14px;
   color: #222;
-  margin-bottom: 1rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  text-align: left;
 }
 
-.custom-title-Proceso {
+.novedad-titulo {
+  font-size: 16px;
   color: #222;
+  margin: 0;
+  font-weight: 600;
 }
-
-.custom-btn-proceso {
-  color: transparent;
-  background-color: transparent;
-  border: none;
-  font-size: 0.85rem;
-  text-decoration: none;
-  font-weight: bold;
-  border-bottom: 2px solid #c5c5c5;
-  border-radius: 0%;
-}
-
-/* Efecto hover en el botón */
-.custom-btn-proceso-proceso:hover {
-  color: #222;
-  background-color: transparent;
-  border-bottom: 2px solid #222;
-  border-radius: 0%;
-}
-
-/* Efecto hover en el botón cuando la tarjeta está en hover */
-.custom-card-Proceso:hover .custom-btn-proceso {
-  color: #222;
-  background-color: transparent;
-  border-bottom: 2px solid #222;
-  border-radius: 0%;
-}
-
-/* Responsive design */
-@media (max-width: 1200px) {
-  .Proceso {
-    margin: 4rem;
-  }
-
-  .custom-card-Proceso {
-    width: 16rem;
-    height: 28rem;
-  }
-
-  .HProceso {
-    font-size: 2rem;
-  }
-
-  .pProceso {
-    font-size: 1rem;
-  }
-
-  .card-title-Proceso {
-    font-size: 1.3rem;
-  }
-
-  .card-text {
-    font-size: 0.9rem;
-  }
-}
-.message-btn {
-  background: none;
-  border: none;
+.novedad-image:hover {
   cursor: pointer;
-  /* animation: pulse 1.2s infinite; */
+}
+/* Efecto hover: el borde inferior se vuelve un “neón” celeste */
+.novedad-info:hover,
+.novedad-image:hover .novedad-info {
+  border-bottom: 3px solid #5fcdd1; /* Neon celeste (#0ff) */
+  cursor: pointer;
+  transition: 0.3s linear;
 }
 
-/* Para pantallas menores a 1000px: dos cards por fila, sin párrafo y con dimensiones ajustadas */
-@media (max-width: 1000px) {
-  /* Convertimos el contenedor en grid de dos columnas */
-  .Proceso-cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  /* Ocultamos el párrafo interno (texto adicional) */
-  .card-text,
-  .custom-text-Proceso {
-    display: none;
-  }
-  /* Ajustamos las dimensiones de las cards para que sean proporcionales */
-  .custom-card-Proceso {
-    /* Cada card ocupará el ancho completo de su grid cell */
-    width: 100%;
-    /* Ajusta la altura para mantener una relación (por ejemplo 1:1.4) */
-    height: 18rem;
-  }
-}
-
-/* Para pantallas menores a 775px */
-@media (max-width: 775px) {
-  .Proceso-cards {
-    display: grid !important; /* Usamos grid para la organización de dos columnas */
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    justify-content: center;
-  }
-
-  /* Sin alterar la estructura, ocultamos elementos adicionales excepto el título y el ícono */
-  .custom-text-Proceso,
-  .card-text,
-  .custom-btn-proceso {
-    display: none;
-  }
-
-  .card-title-Proceso {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-
-  .svg-icon {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 0.5rem;
-  }
-
-  /* Aseguramos que la card se comporte como un botón completo */
-  .custom-card-Proceso {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-  }
-
-  /* Expandir el enlace para cubrir toda la card sin modificar la estructura HTML */
-  .custom-card-Proceso a.custom-btn-proceso {
-    display: block !important;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    text-indent: -9999px;
-  }
-}
-
+/* Ajuste responsivo (ejemplo) */
 @media (max-width: 576px) {
-  .Proceso {
-    margin: 1rem;
+  .novedades-cards {
+    gap: 1rem;
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    justify-content: center; /* Centrar las tarjetas */
   }
-
-  .custom-card-Proceso {
-    width: 100%;
-    height: auto;
-    margin-top: 1rem;
+  .novedad-card {
+    width: 90%; /* Una tarjeta por fila */
+    margin: 0 auto 1rem auto;
   }
-
-  .HProceso {
-    font-size: 1.5rem;
+  .novedad-info {
+    width: 95%;
+    bottom: -15px;
   }
-
-  .pProceso {
-    font-size: 0.8rem;
-  }
-
-  .card-title-Proceso {
-    font-size: 1rem;
-  }
-
-  .card-text {
-    font-size: 0.7rem;
-  }
-  .message-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 47px;
-    /* border-radius: 50%; */
-    background-color: #222;
-    color: transparent;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    animation: none;
-  }
-  .message-btn {
-    animation: none; /* Detener la animación */
+  .novedad-image {
+    height: 180px; /* Ajustar la altura de las imágenes */
   }
 }
 
-/* Títulos en pantallas grandes (por defecto) */
-.card-title-Proceso {
-  font-size: 21px; /* Tamaño inicial */
-}
+/* Para pantallas menores a 1015px */
+@media (max-width: 1015px) {
+  .novedades-cards {
+    display: flex; /* Usar flexbox para alinear las tarjetas en una fila */
+    flex-wrap: nowrap; /* Evitar que las tarjetas se envuelvan */
+    justify-content: space-between; /* Espaciado uniforme entre las tarjetas */
+    gap: 1rem; /* Espaciado entre las tarjetas */
+  }
 
-/* Pantallas medianas (menos de 1200px) */
-@media (max-width: 1200px) {
-  .card-title-Proceso {
-    font-size: 18px; /* Reducir ligeramente */
+  .novedad-card {
+    width: 28%; /* Reducir el ancho de las tarjetas para que quepan en una fila */
+    height: auto; /* Ajustar la altura automáticamente */
+    margin-bottom: 0; /* Eliminar el margen inferior */
   }
-}
 
-/* Pantallas pequeñas (menos de 992px) */
-@media (max-width: 992px) {
-  .card-title-Proceso {
-    font-size: 16px; /* Reducir más */
+  .novedad-image {
+    height: 250px; /* Reducir la altura de las imágenes */
   }
-}
 
-/* Pantallas muy pequeñas (menos de 768px) */
-@media (max-width: 768px) {
-  .card-title-Proceso {
-    font-size: 20px; /* Reducir aún más */
+  .novedad-info {
+    font-size: 14px; /* Reducir el tamaño del texto */
+    padding: 0.5rem; /* Reducir el padding */
   }
-}
 
-/* Pantallas extra pequeñas (menos de 576px) */
-@media (max-width: 576px) {
-  .card-title-Proceso {
-    font-size: 20px; /* Tamaño mínimo */
+  .novedad-titulo {
+    font-size: 11px; /* Ajustar el tamaño del título */
+    padding: 8px 0;
   }
-  .message-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 47px;
-    /* border-radius: 50%; */
-    background-color: transparent;
-    color: transparent;
-    border: none;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    animation: none;
-  }
-  .message-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    /* animation: pulse 1.2s infinite; */
+
+  .novedad-fecha {
+    font-size: 12px; /* Ajustar el tamaño de la fecha */
   }
 }
