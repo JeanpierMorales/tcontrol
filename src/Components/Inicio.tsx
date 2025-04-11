@@ -24,7 +24,7 @@ import Logo from "../Media/Image/Tinici.png"; // Importa la imagen del logo
 // Novedades
 import novedadesImage1 from "../Media/Image/novedades1.jpg";
 import novedadesImage2 from "../Media/Image/novedades2.jpg";
-import novedadesImage3 from "../Media/Image/novedades3.png";
+//import novedadesImage3 from "../Media/Image/novedades3.png";
 import novedadesImage4 from "../Media/Image/novedades4.png";
 
 import IndustriaAutomatizacion from "../Media/Image/IndustriaAutomatizacion.png";
