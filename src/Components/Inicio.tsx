@@ -72,6 +72,24 @@ const Inicio: React.FC = () => {
       mission: "Misión",
       vision: "Visión",
       values: "Nuestros Valores",
+      process: "Nuestro Proceso de Trabajo en Tcontrol",
+      contactUs: "Hablemos sobre tu proyecto",
+      connectWithUs:
+        "Conéctese con nuestro equipo y empecemos a transformar su empresa con innovación y tecnología",
+      support: "Soporte y Mantenimiento",
+      implementation: "Implementación, Pruebas y puesta en marcha",
+      design: "Diseño y Planificación",
+      consultation: "Consulta y Diagnóstico",
+      ubicanos: "Ubícanos",
+      sendMessage: "Déjanos un mensaje",
+      specialtiesTitle: "Especialidades",
+      industriesTitle: "Industrias",
+      novedadesTitle: "Novedades",
+      novedadesSubtitle:
+        "Cada solución implementada refleja nuestro compromiso con la innovación tecnológica y la excelencia operativa.",
+      footerTitle:
+        "Estamos listos para llevar tus proyectos al siguiente nivel.",
+      footerRights: "© 2025 T-Control. Todos los derechos reservados.",
     },
     en: {
       welcome: "Welcome to",
@@ -86,6 +104,23 @@ const Inicio: React.FC = () => {
       mission: "Mission",
       vision: "Vision",
       values: "Our Values",
+      process: "Our Work Process at Tcontrol",
+      contactUs: "Let's talk about your project",
+      connectWithUs:
+        "Connect with our team and let's start transforming your company with innovation and technology",
+      support: "Support and Maintenance",
+      implementation: "Implementation, Testing, and Commissioning",
+      design: "Design and Planning",
+      consultation: "Consultation and Diagnosis",
+      ubicanos: "Locate Us",
+      sendMessage: "Leave us a message",
+      specialtiesTitle: "Specialties",
+      industriesTitle: "Industries",
+      novedadesTitle: "News",
+      novedadesSubtitle:
+        "Each implemented solution reflects our commitment to technological innovation and operational excellence.",
+      footerTitle: "We are ready to take your projects to the next level.",
+      footerRights: "© 2025 T-Control. All rights reserved.",
     },
   };
 
@@ -221,10 +256,10 @@ const Inicio: React.FC = () => {
       titulo: "Suministro, montaje y puesta en marcha de sistemas de bombeo",
       img: novedadesImage2,
     },
-    {
+    /*{
       titulo: "Sistemas hidrotérmico para la producción de mango (importación)",
       img: novedadesImage3,
-    },
+    },*/
     {
       titulo:
         "Diseño, ensamblaje e instalación de tableros eléctricos y de control",
@@ -304,7 +339,7 @@ const Inicio: React.FC = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link OpcionMenu d" href="#Novedades">
-                    Novedades
+                    {translations[language].novedadesTitle}
                   </a>
                 </li>
                 <li className="nav-item">
@@ -339,7 +374,7 @@ const Inicio: React.FC = () => {
 
       {/* Sección Nosotros ----------------------------------------------------------------------------------------------------------------------*/}
       <section className="nosotros" id="Nosotros">
-        <h2 className="nosotros-titulo">Nosotros</h2>
+        <h2 className="nosotros-titulo">{translations[language].us}</h2>
         <br />
         <br />
 
@@ -398,7 +433,9 @@ const Inicio: React.FC = () => {
 
       <section className="industria3-section" id="Industria">
         {/* Título de la sección */}
-        <h2 className="industria3-title">Industrias</h2>
+        <h2 className="industria3-title">
+          {translations[language].industriesTitle}
+        </h2>
         <br />
         {/* Subtítulo de la sección */}
         <p className="industria3-subtitle">
@@ -485,7 +522,7 @@ const Inicio: React.FC = () => {
       {/* Sección Especialidades ----------------------------------------------------------------------------------------------------------------------*/}
       <section className="container my-5" id="Especialidades">
         <h2 className="text-center mb-4 tituloEspecialidades">
-          Especialidades
+          {translations[language].specialtiesTitle}
         </h2>{" "}
         <br />
         <h3 className="text-center">Automatización y Control</h3>
@@ -587,7 +624,7 @@ const Inicio: React.FC = () => {
       {/* Sección Proceso ----------------------------------------------------------------------------------------------------------------------*/}
       <section className="container SProceso" id="Proceso">
         <div className="text-center">
-          <p className="pProceso">Nuestro Proceso de Trabajo en Tcontrol</p>
+          <p className="pProceso">{translations[language].process}</p>
         </div>
 
         <div className="d-flex justify-content-center gap-3 mt-4 Proceso-cards">
@@ -595,7 +632,7 @@ const Inicio: React.FC = () => {
           <div className="card custom-card-Proceso">
             <div className="card-body d-flex flex-column">
               <h5 className="card-title-Proceso text-center custom-title-Proceso">
-                Consulta y Diagnóstico
+                {translations[language].consultation}
               </h5>
               <br />
               <br />
@@ -639,7 +676,7 @@ const Inicio: React.FC = () => {
           <div className="card custom-card-Proceso">
             <div className="card-body d-flex flex-column">
               <h5 className="card-title-Proceso text-center custom-title-Proceso">
-                Diseño y Planificación
+                {translations[language].design}
               </h5>
               <br />
               <br />
@@ -685,7 +722,7 @@ const Inicio: React.FC = () => {
           <div className="card custom-card-Proceso">
             <div className="card-body d-flex flex-column">
               <h5 className="card-title-Proceso text-center custom-title-Proceso">
-                Implementación, Pruebas y puesta en marcha
+                {translations[language].implementation}
               </h5>
               <br />
               <p className="card-text text-center custom-text-Proceso">
@@ -736,7 +773,7 @@ const Inicio: React.FC = () => {
           <div className="card custom-card-Proceso">
             <div className="card-body d-flex flex-column">
               <h5 className="card-title-Proceso text-center custom-title-Proceso">
-                Soporte y Mantenimiento
+                {translations[language].support}
               </h5>
               <br />
               <br />
@@ -774,13 +811,14 @@ const Inicio: React.FC = () => {
       <section className="novedades-section" id="Novedades">
         <div className="container text-center">
           {/* Título */}
-          <h2 className="novedades-title">Novedades</h2>
+          <h2 className="novedades-title">
+            {translations[language].novedadesTitle}
+          </h2>
           <br />
           <br />
           {/* Subtítulo */}
           <p className="novedades-subtitle">
-            Cada solución implementada refleja nuestro compromiso con la
-            innovación tecnológica y la excelencia operativa.
+            {translations[language].novedadesSubtitle}
           </p>
           <br />
 
@@ -804,13 +842,10 @@ const Inicio: React.FC = () => {
       {/* Sección Contactanos ----------------------------------------------------------------------------------------------------------------------*/}
       <section className="container my-5 Contactanos" id="Contactanos">
         <div className="text-center">
-          <h1 className="HContactanos">Hablemos sobre tu proyecto</h1>
+          <h1 className="HContactanos">{translations[language].contactUs}</h1>
           <br />
           <br />
-          <p className="pContactanos">
-            Conéctese con nuestro equipo y empecemos a transformar su empresa
-            con innovación y tecnología
-          </p>
+          <p className="pContactanos">{translations[language].connectWithUs}</p>
         </div>
 
         <div className="d-flex justify-content-center flex-wrap gap-3 mt-4 Contactanos-cards">
@@ -901,7 +936,9 @@ const Inicio: React.FC = () => {
 
       <section className="ubicanos-section py-5" id="Datos">
         <div className="container">
-          <h2 className="text-center mb-4 tituloUbicanos">Ubícanos</h2>
+          <h2 className="text-center mb-4 tituloUbicanos">
+            {translations[language].ubicanos}
+          </h2>
           <br />
           <div className="ubicanos-map-container">
             <iframe
@@ -959,7 +996,9 @@ const Inicio: React.FC = () => {
         {showOverlay && (
           <div className="overlay">
             <div className="overlay-content">
-              <h2 className="datos-title mb-4">Déjanos un mensaje</h2>
+              <h2 className="datos-title mb-4">
+                {translations[language].sendMessage}
+              </h2>
               <form onSubmit={handleSubmit}>
                 <div className="form-group">
                   <label htmlFor="mensaje" className="form-label">
@@ -1009,7 +1048,7 @@ const Inicio: React.FC = () => {
       <footer className="footer" id="Footer">
         <div className="footer-top">
           <h2 className="Footer-Titulo">
-            Estamos listos para llevar tus proyectos al siguiente nivel.
+            {translations[language].footerTitle}
           </h2>
         </div>
         <div className="footer-main">
@@ -1118,7 +1157,7 @@ const Inicio: React.FC = () => {
           </div>
 
           <div className="footer-section specialities">
-            <h3>Especialidades</h3>
+            <h3>{translations[language].specialtiesTitle}</h3>
             <ul>
               {[
                 "SCADA y Telemetría",
@@ -1141,7 +1180,7 @@ const Inicio: React.FC = () => {
           </div>
 
           <div className="footer-section industries">
-            <h3>Industrias</h3>
+            <h3>{translations[language].industriesTitle}</h3>
             <ul>
               {[
                 "Eléctrica",
@@ -1170,9 +1209,7 @@ const Inicio: React.FC = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p className="tControl2025">
-            © 2025 T-Control. Todos los derechos reservados.
-          </p>
+          <p className="tControl2025">{translations[language].footerRights}</p>
           {/*<p>Política Ambiental</p>
           <p>Política de Calidad</p>
           <p>Privacidad</p>
