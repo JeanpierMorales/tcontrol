@@ -20,6 +20,7 @@ import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 // Incio
 import Logo from "../Media/Image/Tinici.png"; // Importa la imagen del logo
+import portada1 from "../Media/Image/portada1.png"; // Importación de la primera portada
 
 // Novedades
 import novedadesImage1 from "../Media/Image/novedades1.jpg";
@@ -30,6 +31,7 @@ import novedadesImage4 from "../Media/Image/novedades4.png";
 import IndustriaAutomatizacion from "../Media/Image/IndustriaAutomatizacion.png";
 import IndustriaSeguridad from "../Media/Image/IndustriaSeguridad.png";
 import EspecialidadInstrumentacion from "../Media/Image/Instrumentacion.png";
+import EspecialidadScada from "../Media/Image/EspecialidadesScada.jpg";
 import EspecialidadAuProInd from "../Media/Image/AutomatizacionProcesoIndustrial.png";
 import EspecialidadCableadoEstructurado from "../Media/Image/CableadoE.png";
 import EspecialidadRedComInd from "../Media/Image/RedComInd.png";
@@ -52,6 +54,7 @@ const Inicio: React.FC = () => {
   const [language, setLanguage] = useState<"es" | "en">("es"); // Estado para el idioma
 
   const images = [
+    portada1,
     IndustriaAutomatizacion,
     EspecialidadAuProInd,
     EspecialidadesSisPotEne,
@@ -424,7 +427,7 @@ const Inicio: React.FC = () => {
 
   // Imagenes de Especialidades
   const specialties = [
-    { image: EspecialidadInstrumentacion },
+    { image: EspecialidadScada },
     { image: EspecialidadInstrumentacion },
     { image: EspecialidadAuProInd },
   ];
