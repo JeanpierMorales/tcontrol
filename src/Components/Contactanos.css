@@ -1,3 +1,4 @@
+/* Estilos para el contenedor principal de Contactanos */
 s.HContactanos {
   font-size: 40px;
   margin-bottom: 10px;
@@ -100,6 +101,7 @@ s.HContactanos {
   border-radius: 0%;
 }
 
+/* Estilo para el contenedor de las tarjetas */
 .Contactanos-cards {
   margin-bottom: 6rem;
 }

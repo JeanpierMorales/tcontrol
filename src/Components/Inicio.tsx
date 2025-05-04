@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-// Importar los css
+// Importar los css de lso componente unitarios en orden de uso
 import "./Inicio.css";
 import "./Nosotros.css";
 import "./IndustriasTres.css";
@@ -11,40 +11,46 @@ import "./Contactanos.css";
 import "./UbicanosMensaje.css";
 import "./Footer.css";
 
-// actualizaciones Bootstrap
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min.js";
+// Importaciones de los Bootstrap y su respectivo Js
+import "bootstrap/dist/css/bootstrap.min.css"; // Importa el CSS de Bootstrap
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Importa el JS de Bootstrap
 
-// Importar las imágenes
+// Importaciones de las imagenes para cada sección
 
-// Incio
-import Logo from "../Media/Image/Tinici.png"; // Importa la imagen del logo
-import portada1 from "../Media/Image/portada1.png"; // Importación de la primera portada
+// Imagenes para el Incio
 
-// Novedades
-import novedadesImage1 from "../Media/Image/novedades1.jpg";
-import novedadesImage2 from "../Media/Image/novedades2.jpg";
-//import novedadesImage3 from "../Media/Image/novedades3.png";
-import novedadesImage4 from "../Media/Image/novedades4.png";
+import inicioLogo from "../Media/Image/Tinici.png"; // Importa la imagen del logo Tcontrol
+import InicioPortada1 from "../Media/Image/portada1.png"; // Importación de la primera portada que aparece, las demás son para el carrusel
 
+// Imagenes para la sección de industrias
+import IndustriaElectrica from "../Media/Image/IndustriaElectrica.jpg";
+import IndustriaRedes from "../Media/Image/IndustriaRedes.jpg";
+import IndustriaConstruccion from "../Media/Image/IndustriaConstruccion.jpg";
+import IndustriaAgro from "../Media/Image/IndustriaAgro.jpg";
 import IndustriaAutomatizacion from "../Media/Image/IndustriaAutomatizacion.png";
 import IndustriaSeguridad from "../Media/Image/IndustriaSeguridad.png";
-import EspecialidadInstrumentacion from "../Media/Image/Instrumentacion.png";
-import EspecialidadScada from "../Media/Image/EspecialidadesScada.jpg";
-import EspecialidadAuProInd from "../Media/Image/AutomatizacionProcesoIndustrial.png";
-import EspecialidadCableadoEstructurado from "../Media/Image/CableadoE.png";
-import EspecialidadRedComInd from "../Media/Image/RedComInd.png";
-import EspecialidadTeleReIn from "../Media/Image/TeleReIn.jpg";
+// Imagenes para la sección de Especialidades
 
-import EspecialidadesEleYPot from "../Media/Image/EspecialidadesEleYPot.png";
-import EspecialidadesSisBom from "../Media/Image/EspecialidadesSisBom.png";
-import EspecialidadesDisTabEl from "../Media/Image/EspecialidadesDisTabEl.png";
-import EspecialidadesSisPotEne from "../Media/Image/EspecialidadesSisPotEne.jpg";
-import EspecialidadesSisACI from "../Media/Image/EspecialidadesSisACI.png";
+import EspecialidadScada from "../Media/Image/EspecialidadesScada.jpg"; // Automatizacion y control
+import EspecialidadInstrumentacion from "../Media/Image/Instrumentacion.png"; // Automatizacion y control
+import EspecialidadAuProInd from "../Media/Image/AutomatizacionProcesoIndustrial.png"; // Automatizacion y control
+import EspecialidadCableadoEstructurado from "../Media/Image/CableadoE.png"; // Infraestructura y redes
+import EspecialidadRedComInd from "../Media/Image/RedComInd.png"; // Infraestructura y redes
+import EspecialidadTeleReIn from "../Media/Image/TeleReIn.jpg"; // Infraestructura y redes
+import EspecialidadesEleYPot from "../Media/Image/EspecialidadesEleYPot.png"; // Energía y potencia
+import EspecialidadesSisBom from "../Media/Image/EspecialidadesSisBom.png"; // Energía y potencia
+import EspecialidadesDisTabEl from "../Media/Image/EspecialidadesDisTabEl.png"; // Energía y potencia
+import EspecialidadesSisPotEne from "../Media/Image/EspecialidadesSisPotEne.jpg"; // Energía y potencia
+import EspecialidadesSisACI from "../Media/Image/EspecialidadesSisACI.png"; // Energía y potencia
+import EspecialidadesVidCCTV from "../Media/Image/EspecialidadesVidCCTV.jpg"; // Seguridad electrónica
+import EspecialidadesSisAlaInt from "../Media/Image/EspecialidadesSisAlaInt.jpg"; // Seguridad electrónica
 
-import EspecialidadesVidCCTV from "../Media/Image/EspecialidadesVidCCTV.jpg";
-import EspecialidadesSisAlaInt from "../Media/Image/EspecialidadesSisAlaInt.jpg";
+// Imagenes para la sección de Novedades
+
+import novedadesImage1 from "../Media/Image/novedades1.jpg";
+import novedadesImage2 from "../Media/Image/novedades2.jpg";
+// import novedadesImage3 from "../Media/Image/novedades3.png";
+import novedadesImage4 from "../Media/Image/novedades4.png";
 
 // Footer
 import FooterLogo from "../Media/Image/T-Control.png"; // Importa la imagen
@@ -53,13 +59,16 @@ const Inicio: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [language, setLanguage] = useState<"es" | "en">("es"); // Estado para el idioma
 
+  // Variables de imagenes para el carrusel de inicio
   const images = [
-    portada1,
+    InicioPortada1,
     IndustriaAutomatizacion,
     EspecialidadAuProInd,
     EspecialidadesSisPotEne,
     EspecialidadTeleReIn,
   ];
+
+  // Traducciones para los textos en español e inglés
 
   const translations = {
     es: {
@@ -379,6 +388,7 @@ const Inicio: React.FC = () => {
     },
   };
 
+  // Efecto de cambio para los carrouseles de inicio
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
@@ -387,29 +397,30 @@ const Inicio: React.FC = () => {
   }, [images.length]);
 
   const toggleLanguage = () => {
-    setLanguage((prevLanguage) => (prevLanguage === "es" ? "en" : "es"));
+    setLanguage((prevLanguage) => (prevLanguage === "es" ? "en" : "es")); // Cambia el idioma entre español e inglés
   };
 
-  //  Industrias Tres
+  //  COnstantes de imagenes para los carrouseles de Industria
 
   const slides = [
+    // Datos para los slides de la sección de industrias
     {
-      img: "https://i.pinimg.com/736x/af/3a/bd/af3abdcde2f0de641a26a127d93991a7.jpg",
+      img: IndustriaElectrica,
       title: translations[language].industriesSlides[0].title,
       text: translations[language].industriesSlides[0].text,
     },
     {
-      img: "https://cdn.pixabay.com/photo/2017/07/31/16/18/engineer-2558705_1280.jpg",
+      img: IndustriaRedes,
       title: translations[language].industriesSlides[1].title,
       text: translations[language].industriesSlides[1].text,
     },
     {
-      img: "https://cdn.pixabay.com/photo/2019/02/06/16/32/architect-3979490_1280.jpg",
+      img: IndustriaConstruccion,
       title: translations[language].industriesSlides[2].title,
       text: translations[language].industriesSlides[2].text,
     },
     {
-      img: "https://i.pinimg.com/736x/f1/24/55/f124556a1b6281e7c119730fd5c7cb56.jpg",
+      img: IndustriaAgro,
       title: translations[language].industriesSlides[3].title,
       text: translations[language].industriesSlides[3].text,
     },
@@ -425,7 +436,7 @@ const Inicio: React.FC = () => {
     },
   ];
 
-  // Imagenes de Especialidades
+  // Imagenes de Especialidades para el carrousel de especialidades
   const specialties = [
     { image: EspecialidadScada },
     { image: EspecialidadInstrumentacion },
@@ -451,7 +462,7 @@ const Inicio: React.FC = () => {
     { image: EspecialidadesSisAlaInt },
   ];
 
-  // Novedades
+  // Novedades para el carrousel de novedades
   const novedadesData = translations[language].novedades.map(
     (titulo, index) => ({
       titulo,
@@ -492,7 +503,7 @@ const Inicio: React.FC = () => {
           <div className="container-fluid navbar-custom CI">
             {/* Logo a la izquierda */}
             <a className="navbar-brand" href="#Inicio">
-              <img src={Logo} alt="Logo" className="logo-img" />
+              <img src={inicioLogo} alt="Logo" className="logo-img" />
             </a>
 
             {/* Botón de colapso en pantallas pequeñas */}

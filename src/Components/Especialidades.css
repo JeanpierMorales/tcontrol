@@ -1,6 +1,7 @@
+/* Estilos para el contenedor principal */
 .my-5 {
-  margin-top: 3rem !important;
-  margin-bottom: 0rem !important;
+  margin-top: 3rem !important; /* Espacio superior */
+  margin-bottom: 0rem !important; /* Espacio inferior */
 }
 .tituloEspecialidades {
   font-size: 40px;

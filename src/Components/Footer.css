@@ -4,7 +4,7 @@
   color: white;
   padding: 30px 0px;
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  font-optical-sizing: auto; /* Ajusta el tamaño de la fuente según el contexto */
   font-weight: light;
   font-style: normal;
 }
@@ -24,7 +24,7 @@
 /* Contenedor principal del footer */
 .footer-main {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
   gap: 20px;
   padding: 6rem;
   background-color: #222;
@@ -122,7 +122,7 @@
 }
 
 .pathFlecha {
-  fill: #fff;
+  fill: #fff; /* Color de la flecha */
 }
 
 .scroll-top:hover,

@@ -9,7 +9,7 @@
   font-size: 40px;
   margin-bottom: 10px;
   font-family: "Inter", sans-serif;
-  font-optical-sizing: auto;
+  font-optical-sizing: auto; /* Ajusta el tamaño de la fuente según el contenido */
   font-weight: 600;
   font-style: normal;
   max-width: 500px;
@@ -66,7 +66,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2); /* Ajusta la opacidad (0.5 = 50%) */
-  z-index: 1;
+  z-index: 1; /* Asegura que el overlay esté por encima de la imagen */
   transition: background-color 0.3s ease;
 }
 
@@ -114,7 +114,7 @@
 /* Ajuste responsivo (ejemplo) */
 @media (max-width: 576px) {
   .novedades-cards {
-    gap: 1rem;
+    gap: 1rem; /* Espacio entre tarjetas (si usas d-flex y flex-wrap) */
     flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
     justify-content: center; /* Centrar las tarjetas */
   }

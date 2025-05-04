@@ -140,7 +140,7 @@
 }
 /* Borde inferior sutil al pasar el cursor en menú extendido (responsive) */
 .navbar-collapse .OpcionMenu:hover {
-  border-bottom: 3px solid #3da7ab;
+  border-bottom: 3px solid #3da7ab; /* Color del borde al pasar el cursor */
 }
 
 /* Logo */
@@ -161,7 +161,7 @@
   max-width: 450px;
   font-weight: 600;
   color: #fff;
-  font-size: var(--font-large);
+  font-size: var(--font-large); /* Tamaño de fuente para títulos */
   line-height: 1.1;
   margin-bottom: 2rem;
   margin-left: 10rem;
@@ -175,12 +175,12 @@
   max-width: 530px;
   color: #ffffff;
   margin-left: 10rem;
-  font-size: var(--font-small);
+  font-size: var(--font-small); /* Tamaño de fuente para párrafos */
   font-family: "Inter", sans-serif;
   font-weight: 400;
   letter-spacing: 0.5px;
   transition: font-size var(--transition-speed) ease,
-    margin var(--transition-speed) ease;
+    margin var(--transition-speed) ease; /* Transición suave */
 }
 
 /* Botón de Servicios */
@@ -197,7 +197,7 @@
   font-size: var(--font-small);
   padding: 0.8rem 1.5rem;
   transition: font-size var(--transition-speed) ease,
-    margin var(--transition-speed) ease, padding var(--transition-speed) ease;
+    margin var(--transition-speed) ease, padding var(--transition-speed) ease; /* Transición suave */
 }
 .BServicios:hover {
   background-color: #3da7ab;
@@ -213,7 +213,7 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */
 }
 
 .btn-language:hover {

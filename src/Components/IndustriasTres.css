@@ -1,10 +1,11 @@
 /* 
   Estilos principales para la sección de IndustriaTres.
-  Se utilizan prefijos 'industria3-' para evitar conflictos con otras secciones.
+  Se utilizan prefijos con en el caso de 'industria3-' para evitar conflictos con otras secciones.
 */
 
 /* Contenedor general de la sección */
 .industria3-section {
+  /*Llamado sección 3 por las versiones anteriores que se han desarrollado sobre la misma web*/
   margin: 10rem 0rem;
   padding: 0rem 0.8rem 0rem 0.8rem;
 }
@@ -163,6 +164,6 @@
 /* Ajustes adicionales para pantallas hasta 768px (si deseas reducir ligeramente otros textos) */
 @media (max-width: 768px) {
   .industria3-subtitle {
-    font-size: 0.9rem;
+    font-size: 0.9rem; /* Tamaño de fuente reducido */
   }
 }

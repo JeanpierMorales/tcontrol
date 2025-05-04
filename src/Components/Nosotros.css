@@ -116,8 +116,8 @@
 .mision::before,
 .vision::before,
 .valores::before {
-  content: "";
-  position: absolute;
+  content: ""; /* Necesario para el pseudo-elemento */
+  position: absolute; /* Posiciona el pseudo-elemento */
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -126,7 +126,7 @@
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end; /* Alinea el texto al final del contenedor */
   justify-content: center;
   padding-bottom: 10px;
 }
@@ -199,7 +199,7 @@
     opacity: 0;
     transform: translateY(100%);
     transition: opacity var(--transition-speed) ease,
-      transform var(--transition-speed) ease;
+      transform var(--transition-speed) ease; /* Añade una transición para el movimiento */
     position: absolute;
     top: 0;
     left: 0;
@@ -207,7 +207,7 @@
   /* La parte frontal permanece visible */
   .card-front {
     opacity: 1;
-    transition: opacity var(--transition-speed) ease;
+    transition: opacity var(--transition-speed) ease; /* Añade una transición para la opacidad */
   }
   /* Al interactuar (hover) o al tocar, se oculta la parte frontal y se muestra la parte trasera */
   .cardNosotros:hover .card-front,

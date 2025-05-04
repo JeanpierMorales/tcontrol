@@ -1,9 +1,11 @@
+/* Sección del proceso*/
 .SProceso {
   margin-top: 10rem;
   margin-bottom: 7rem;
   text-align: center;
 }
 
+/* Título de la sección */
 .svg-icon-container {
   margin-top: auto;
   text-align: center;
@@ -54,7 +56,7 @@
   text-align: center;
   font-family: "Inter", sans-serif;
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.5px; /* Espaciado entre letras */
 }
 
 .card-title-Proceso {
@@ -134,7 +136,7 @@
   /* Convertimos el contenedor en grid de dos columnas */
   .Proceso-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
     gap: 1rem;
   }
   /* Ocultamos el párrafo interno (texto adicional) */

@@ -96,7 +96,7 @@ body {
   border: none;
   margin-left: 10px;
   cursor: pointer;
-  animation: pulse 1.2s infinite;
+  animation: pulse 1.2s infinite; /* Efecto de pulso */
 }
 
 @keyframes pulse {
@@ -150,7 +150,7 @@ body {
   border-radius: 4px;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; /* Transición suave */
 }
 
 .back-btn:hover {
@@ -202,7 +202,7 @@ body {
 
 .datos-textarea:focus,
 .datos-email-input:focus {
-  outline: none;
+  outline: none; /* Sin contorno al hacer foco */
   border: 1px solid #c5c5c5;
 }
 
@@ -222,7 +222,7 @@ body {
   border-radius: 0; /* Sin bordes redondeados */
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Transición suave */
   box-shadow: none; /* Sin sombra */
 }
 .datos-btn:not(:hover) {
@@ -331,7 +331,7 @@ body {
 
 .datos-textarea {
   width: 100%;
-  border-radius: 20px !important;
+  border-radius: 20px !important; /* Bordes redondeados de 20px */
   padding: 10px;
   font-size: 16px;
   border: 1px solid #ccc;
