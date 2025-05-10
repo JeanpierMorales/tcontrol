@@ -308,4 +308,14 @@
     cursor: pointer;
     /* animation: pulse 1.2s infinite; */
   }
+  .pProceso {
+    font-size: 16px;
+    color: #929292;
+    max-width: 700px;
+    text-align: center;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0 auto;
+  }
 }
