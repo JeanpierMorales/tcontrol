@@ -285,12 +285,12 @@
   .tituloInicio {
     font-size: 50px; /* Título pequeño */
     text-align: center;
-    max-width: 100%;
+    max-width: 80%;
   }
   .ContInicio {
     font-size: 14px;
     text-align: center;
-    max-width: 100%;
+    max-width: 90%;
   }
   .BServicios {
     font-size: 14px;

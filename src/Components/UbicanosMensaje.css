@@ -354,4 +354,9 @@ body {
   .message-btn {
     background: transparent;
   }
+  .ubicanos-contact-info {
+    padding: 20px;
+    max-width: 360px;
+    display: none;
+  }
 }
