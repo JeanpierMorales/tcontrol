@@ -49,8 +49,8 @@
 }
 
 .pProceso {
-  font-size: 16px;
-  color: #929292;
+  font-size: 2rem;
+  color: #222;
   max-width: 700px;
   margin: 0 auto 50px;
   text-align: center;
@@ -100,7 +100,7 @@
 /* Responsive design */
 @media (max-width: 1200px) {
   .Proceso {
-    margin: 4rem;
+    margin: 2rem;
   }
 
   .custom-card-Proceso {
@@ -113,7 +113,7 @@
   }
 
   .pProceso {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .card-title-Proceso {
@@ -151,6 +151,10 @@
     /* Ajusta la altura para mantener una relación (por ejemplo 1:1.4) */
     height: 18rem;
   }
+  .pProceso {
+    font-size: 1.3rem;
+    color: #222;
+  }
 }
 
 /* Para pantallas menores a 775px */
@@ -160,6 +164,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     justify-content: center;
+  }
+  .pProceso {
+    font-size: 1.3rem;
+    color: #222;
   }
 
   /* Sin alterar la estructura, ocultamos elementos adicionales excepto el título y el ícono */

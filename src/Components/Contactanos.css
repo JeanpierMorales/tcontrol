@@ -138,3 +138,19 @@ s.HContactanos {
     gap: 1rem; /* Espaciado entre las tarjetas */
   }
 }
+@media (max-width: 375px) {
+  .custom-card-Contactanos {
+    margin-top: 2rem;
+    width: 16rem;
+    height: 10rem;
+    box-shadow: 0 4px 6px #929292;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    border-radius: 20px;
+  }
+}

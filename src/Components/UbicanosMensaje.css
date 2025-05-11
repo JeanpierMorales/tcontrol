@@ -364,3 +364,19 @@ body {
     box-shadow: none;
   }
 }
+@media (max-width: 375px) {
+  .ubicanos-map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    height: 100%;
+    border: 0;
+    /* Centrar mapa*/
+  }
+  .ubicanos-section {
+    margin: 5rem 0 0;
+    position: relative;
+  }
+}

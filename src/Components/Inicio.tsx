@@ -92,7 +92,7 @@ const Inicio: React.FC = () => {
       mission: "Misión",
       vision: "Visión",
       values: "Valores",
-      process: "Nuestro Proceso de Trabajo en Tcontrol",
+      process: "Nuestro proceso de trabajo en Tcontrol",
       processSteps: [
         {
           title: "Consulta y Diagnóstico",
