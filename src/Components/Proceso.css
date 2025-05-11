@@ -264,12 +264,18 @@
   .card-title-Proceso {
     font-size: 18px; /* Reducir ligeramente */
   }
+  .custom-card-Proceso a.custom-btn-proceso {
+    display: none !important;
+  }
 }
 
 /* Pantallas pequeñas (menos de 992px) */
 @media (max-width: 992px) {
   .card-title-Proceso {
     font-size: 16px; /* Reducir más */
+  }
+  .custom-card-Proceso a.custom-btn-proceso {
+    display: none !important;
   }
 }
 
@@ -278,12 +284,23 @@
   .card-title-Proceso {
     font-size: 20px; /* Reducir aún más */
   }
+  .Proceso-cards {
+    display: inline-grid !important;
+  }
+  .custom-card-Proceso {
+    width: 200px;
+    height: 300px;
+    margin-top: 1rem;
+  }
+  .custom-card-Proceso a.custom-btn-proceso {
+    display: none !important;
+  }
 }
 
 /* Pantallas extra pequeñas (menos de 576px) */
 @media (max-width: 576px) {
   .card-title-Proceso {
-    font-size: 20px; /* Tamaño mínimo */
+    font-size: 16px; /* Tamaño mínimo */
   }
   .message-btn {
     display: flex;
@@ -311,11 +328,24 @@
   .pProceso {
     font-size: 16px;
     color: #929292;
-    max-width: 700px;
+    max-width: 90%;
     text-align: center;
     font-family: Inter, sans-serif;
     font-weight: 600;
     letter-spacing: 0.5px;
     margin: 0 auto;
+  }
+  .custom-card-Proceso a.custom-btn-proceso {
+    display: none !important;
+  }
+
+  .custom-card-Proceso {
+    width: 160px;
+    height: 200px;
+    margin-top: 1rem;
+  }
+  .card-body {
+    justify-content: center;
+    width: inherit;
   }
 }

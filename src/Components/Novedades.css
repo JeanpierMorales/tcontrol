@@ -111,26 +111,6 @@
   transition: 0.3s linear;
 }
 
-/* Ajuste responsivo (ejemplo) */
-@media (max-width: 576px) {
-  .novedades-cards {
-    gap: 1rem; /* Espacio entre tarjetas (si usas d-flex y flex-wrap) */
-    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
-    justify-content: center; /* Centrar las tarjetas */
-  }
-  .novedad-card {
-    width: 90%; /* Una tarjeta por fila */
-    margin: 0 auto 1rem auto;
-  }
-  .novedad-info {
-    width: 95%;
-    bottom: -15px;
-  }
-  .novedad-image {
-    height: 180px; /* Ajustar la altura de las imágenes */
-  }
-}
-
 /* Para pantallas menores a 1015px */
 @media (max-width: 1015px) {
   .novedades-cards {
@@ -162,5 +142,34 @@
 
   .novedad-fecha {
     font-size: 12px; /* Ajustar el tamaño de la fecha */
+  }
+  .novedades-title {
+    font-size: 2rem;
+  }
+  .novedades-subtitle {
+    font-size: 16px;
+  }
+}
+
+/* Ajuste responsivo (ejemplo) */
+@media (max-width: 576px) {
+  .novedades-cards {
+    gap: 1rem; /* Espacio entre tarjetas (si usas d-flex y flex-wrap) */
+    flex-wrap: wrap; /* Permitir que las tarjetas se envuelvan */
+    justify-content: center; /* Centrar las tarjetas */
+    margin-top: 3rem;
+    flex-direction: column;
+    align-items: center; /* Centrar horizontalmente */
+  }
+  .novedad-card {
+    width: 80%; /* Una tarjeta por fila */
+    margin: 0 auto 1rem auto;
+  }
+  .novedad-info {
+    width: 80%;
+    bottom: -15px;
+  }
+  .novedad-image {
+    height: 180px; /* Ajustar la altura de las imágenes */
   }
 }

@@ -357,6 +357,10 @@ body {
   .ubicanos-contact-info {
     padding: 20px;
     max-width: 360px;
-    display: none;
+    /*display: none;*/
+    color: transparent;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
   }
 }

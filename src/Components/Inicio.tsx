@@ -116,7 +116,7 @@ const Inicio: React.FC = () => {
         },
       ],
       ubicanos: "Ubícanos",
-      sendMessage: "Déjanos un mensaje",
+      sendMessage: "Ubícanos",
       contactMessage: {
         title: "Estamos en contacto",
         messagePlaceholder: "Escribe aquí tu mensaje",
@@ -274,7 +274,7 @@ const Inicio: React.FC = () => {
         },
       ],
       ubicanos: "Locate Us",
-      sendMessage: "Leave us a message",
+      sendMessage: "Locate us",
       contactMessage: {
         title: "We are in contact",
         messagePlaceholder: "Write your message here",
@@ -728,7 +728,7 @@ const Inicio: React.FC = () => {
         <br />
 
         {/* Categoría: Automatización y Control */}
-        <h3 className="text-center">
+        <h3 className="text-center text-center-esprimero  ">
           {translations[language].specialtiesCategories.automation}
         </h3>
         <br />
@@ -756,7 +756,7 @@ const Inicio: React.FC = () => {
         </div>
 
         {/* Categoría: Infraestructura y Redes */}
-        <h3 className="text-center">
+        <h3 className="text-center text-center-esp">
           {translations[language].specialtiesCategories.infrastructure}
         </h3>
         <br />
@@ -784,7 +784,7 @@ const Inicio: React.FC = () => {
         </div>
 
         {/* Categoría: Energía y Potencia */}
-        <h3 className="text-center">
+        <h3 className="text-center text-center-esp">
           {translations[language].specialtiesCategories.energy}
         </h3>
         <br />
@@ -811,7 +811,7 @@ const Inicio: React.FC = () => {
         </div>
 
         {/* Categoría: Seguridad Electrónica */}
-        <h3 className="text-center">
+        <h3 className="text-center text-center-esp">
           {translations[language].specialtiesCategories.security}
         </h3>
         <br />

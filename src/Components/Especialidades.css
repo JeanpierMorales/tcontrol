@@ -108,6 +108,27 @@
   .container-sm {
     padding: 0rem 3rem;
   }
+  .tituloEspecialidades {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .tituloEspecialidades {
+    font-size: 2rem; /* Tamaño de letra ajustado */
+    margin-bottom: 1.5rem;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .text-center-esp {
+    font-size: 1.3rem; /* Tamaño de letra */
+    margin-top: 4rem;
+  }
 }
 .vigilancia {
   justify-content: center;

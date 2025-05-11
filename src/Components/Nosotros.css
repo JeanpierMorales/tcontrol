@@ -208,6 +208,9 @@
     max-width: 100%;
     margin-bottom: 10px;
   }
+  .nosotros-titulo {
+    font-size: 2rem;
+  }
 
   /* La parte trasera se oculta inicialmente y se posiciona abajo */
   .card-back {
