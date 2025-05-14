@@ -321,10 +321,11 @@
     color: transparent;
     border: none;
     cursor: pointer;
-    position: fixed;
+    position: fixed; /* Fijo en la esquina */
+    /* bottom: 20px; */
     bottom: 20px;
     right: 20px;
-    z-index: 1000;
+    z-index: 1000; /* Aseguramos que esté por encima de otros elementos */
     animation: none;
   }
   .message-btn {
@@ -339,8 +340,8 @@
     max-width: 90%;
     text-align: center;
     font-family: Inter, sans-serif;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-weight: 600; /* Peso de la fuente */
+    letter-spacing: 0.5px; /* Espaciado entre letras */
     margin: 0 auto;
   }
   .custom-card-Proceso a.custom-btn-proceso {
